@@ -19,8 +19,8 @@ public class PTra02_09 {
 		System.out.println(quadrangle);
 
 		// ★ 変数triangleに、三角形の面積を代入してください
-		int triangle;
-		triangle = length * height / 2;
+		double triangle;
+		triangle = (double)length * height / 2;
 
 
 		// ★ 変数triangleを出力してください
