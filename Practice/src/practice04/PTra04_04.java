@@ -36,11 +36,12 @@ public class PTra04_04 {
 			dice = dice + 1;
 
 			// ★ サイコロを振って出た目を、変数progressに加算してください
-			progress = dice + progress ;
+			progress = dice + progress;
+
 
 			// ★ 「残り##マス」と出力してください（##には、残りマスの数を入れてください）
-			
-			System.out.println("残り" + progress + "マス");
+
+			System.out.println("残り" +( map - progress )+ "マス");
 		}
 
 		System.out.println("=========< GOAL >==========");
