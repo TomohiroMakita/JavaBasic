@@ -42,13 +42,16 @@ public class PTra05_03 {
 			 * ●変数lineが上記以外であった場合	->	「無効票です」を出力
 			 */
 
-			switch ( line  ) {
-			case 0:
+			switch ( line ) {
+			case "山":
 				mountain = mountain + 1;
-			case 1:
+				break;
+			case "川":
 				river = river + 1;
-			case 2:
+				break;
+			case "海":
 				ocean = ocean + 1;
+				break;
 			default:
 				System.out.println("無効票です");}
 
