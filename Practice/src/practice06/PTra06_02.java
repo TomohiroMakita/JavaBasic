@@ -14,15 +14,20 @@ public class PTra06_02 {
 
 
 
-		for (int i = 0; i < 21; i++ );{
+		for (int i = 0; i < 21; i++ ){
 
 			// ★ 今何回目の処理なのかを出力してください
 		System.out.println(i);
-		}
-			// ★ 奇数回のときには、「奇数」を出力してください
 
+			// ★ 奇数回のときには、「奇数」を出力してください
+		if ( i % 2 == 1 ) {
+			System.out.println("奇数");
+		}else {
+
+		}
 
 
 		//-----for end
 	}
+}
 }
