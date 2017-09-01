@@ -15,9 +15,13 @@ public class PTra10_04 {
 	public static void main(String[] args) {
 
 		// ★ User型の変数が3つ入る配列usersを宣言・確保してください
+		
+		User [] users = new User[3];
 
 
 		// ★ java.util.Scannerクラスをインスタンス化し、変数scannerに代入してください
+		
+		java.util.Scanner scanner = new java.util.Scanner(System.in);
 
 
 		// ★ usersのサイズ分繰り返す制御構文を記述してください
@@ -28,6 +32,7 @@ public class PTra10_04 {
 
 			// ★ コマンドプロンプトに入力された値を、String型の変数lineに格納してください
 
+			String line = scanner.nextLine();
 
 			// ★ 変数lineに格納されている値を','で区切り、配列にしてください（Stringクラスのメソッドを使用します）
 

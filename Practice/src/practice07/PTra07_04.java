@@ -37,6 +37,7 @@ public class PTra07_04 {
 				System.out.println(trump[index]);
 	
 
-}
-}
+		}
+		}
+	}
 }
