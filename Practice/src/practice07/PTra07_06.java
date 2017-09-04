@@ -30,13 +30,16 @@ public class PTra07_06 {
 
 			array[i] = random;
 
-			System.out.println(array[i]);
+
 
 
 		// ★ 配列arrayの中身を、昇順(数値が小→大になるように)に並び替えてください
 		// 並び替えにはArrays.sort(array);を使用してくださいb。
 
 
+	        Arrays.sort(array);
+	        for(int t = 0;t < array.length;t++)
+	        	System.out.println(array[t]);
 
 
 

@@ -6,6 +6,8 @@ package practice10;
  * Copyright(c) Rhizome Inc. All Rights Reserved.
  */
 
+import java.util.Arrays;
+
 public class PTra10_06 {
 
 	/*
@@ -38,17 +40,24 @@ public class PTra10_06 {
 		final int distance = 200;
 
 
-		int kyori = 0;
+		int kyori1 = 0;
+		int kyori2 = 0;
+		int kyori3 = 0;
+
 		int count1 = 0;
 		int count2 = 0;
 		int count3 = 0;
-		
 
-		while ( kyori <= distance ) {
+//		Car 1
+
+		while ( kyori1 <= distance ) {
 
 			int run = car1.run();
 
-			kyori += run;
+			kyori1 += run;
+
+//			System.out.println( kyori1 );
+//			System.out.println( count1 );
 
 			count1++;
 
@@ -60,17 +69,22 @@ public class PTra10_06 {
 
 		}
 
-		if (kyori >= distance) {
+		if (kyori1 >= distance) {
 
 			System.out.println( "目的地にまで" + count1 + "時間かかりました。残りのガソリンは、" + car1.gasoline + "リットルです");
 
 		}
 
-		while ( kyori <= distance ) {
+//		Car 2
+
+		while ( kyori2 <= distance ) {
 
 			int run = car2.run();
 
-			kyori += run;
+			kyori2 += run;
+
+//			System.out.println( kyori2 );
+//			System.out.println( count2 );
 
 			count2++;
 
@@ -82,16 +96,21 @@ public class PTra10_06 {
 
 		}
 
-		if (kyori >= distance) {
+		if (kyori2 >= distance) {
 
 			System.out.println( "目的地にまで" + count2 + "時間かかりました。残りのガソリンは、" + car2.gasoline + "リットルです");
 		}
 
-		while ( kyori <= distance ) {
+//		Car3
+
+		while ( kyori3 <= distance ) {
 
 			int run = car3.run();
 
-			kyori += run;
+			kyori3 += run;
+
+//			System.out.println( kyori3 );
+//			System.out.println( count3 );
 
 			count3++;
 
@@ -103,12 +122,19 @@ public class PTra10_06 {
 
 		}
 
-		if (kyori >= distance) {
+		if (kyori3 >= distance) {
 
 			System.out.println( "目的地にまで" + count3 + "時間かかりました。残りのガソリンは、" + car3.gasoline + "リットルです");
 
 
 			}
-		}
-	}
+
+		int[] array = new int[]{count1,count2,count3};
+        Arrays.sort(array);
+        for(int i = 0;i < array.length;i++) {
+        	System.out.println( i + 1 + "位" + "" + array[i] +"時間" );
+        	}
+        }
+}
+
 
