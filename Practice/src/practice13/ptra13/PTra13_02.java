@@ -6,6 +6,8 @@
  */
 package practice13.ptra13;
 
+import practice13.common.Hero;
+
 public class PTra13_02 {
 
 	/*
@@ -16,11 +18,15 @@ public class PTra13_02 {
 	public static void main(String[] args) {
 		// ★ common.Heroクラスをインスンタンス化してください
 
+		Hero brave = new Hero(25,10,7);
 
 		// ★ common.Heroインスタンスのnameに"勇者"を設定して下さい
 
+		brave.setName("勇者");
 
 		// ★ common.Heroインスタンスのキャラクター情報を表示してください
+
+		System.out.println(brave.showParameter());
 
 	}
 }
