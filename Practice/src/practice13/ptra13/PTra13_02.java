@@ -18,7 +18,7 @@ public class PTra13_02 {
 	public static void main(String[] args) {
 		// ★ common.Heroクラスをインスンタンス化してください
 
-		Hero brave = new Hero(25,10,7);
+		Hero brave = new Hero();
 
 		// ★ common.Heroインスタンスのnameに"勇者"を設定して下さい
 
