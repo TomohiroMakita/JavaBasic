@@ -19,5 +19,12 @@ public class PTra16_02 {
 		double d = 453.592;
 
 		// ★ 上記基本型を、それぞれのラッパークラスに代入してください
+
+		java.lang.Boolean
+
+
+
+
+
 	}
 }
