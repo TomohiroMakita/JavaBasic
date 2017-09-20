@@ -19,6 +19,7 @@ public class PTra18_01 {
         try(Scanner scanner = new Scanner(new File("file/BestElevenCandidate.csv"))) {
             while (scanner.hasNext()) {
                 String line = scanner.nextLine();
+
                 // ★ 1行ごとにArrayListに格納してください
 
             }
