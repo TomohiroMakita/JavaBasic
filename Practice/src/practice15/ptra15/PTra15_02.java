@@ -18,8 +18,11 @@ public class PTra15_02 {
 
 		room.getCurriculum();
 
-
 		// 取得したカリキュラム情報を全て出力してください
-
+		
+		for (String curriculum : array) {
+			System.out.println(curriculum.getCurriculum());
+			
+		}
 	}
 }

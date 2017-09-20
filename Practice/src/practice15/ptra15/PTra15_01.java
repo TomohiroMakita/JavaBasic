@@ -21,8 +21,8 @@ public class PTra15_01 {
 
 		Course[] courseList = {
 
-				new JavaCourse(),
-				new DBCourse()
+				jCourse,
+				dbCourse
 
 		};
 
