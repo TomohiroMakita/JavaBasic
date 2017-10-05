@@ -31,15 +31,15 @@ public class PTra05_02 {
 		 */
 
 
-		input = input % 2;
 
-		switch (input) {
+
+		switch (input % 2) {
 
 	case 0 :
-		System.out.print( line + "は偶数です");
+		System.out.print( input + "は偶数です");
 		break;
 	case 1 :
-		System.out.print( line + "は奇数です");
+		System.out.print( input + "は奇数です");
 		break;
 		}
 	}

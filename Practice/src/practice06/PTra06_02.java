@@ -14,7 +14,7 @@ public class PTra06_02 {
 
 
 
-		for (int i = 0; i < 21; i++ ){
+		for (int i = 1 ; i < 21; i++ ){
 
 			// ★ 今何回目の処理なのかを出力してください
 		System.out.println(i);

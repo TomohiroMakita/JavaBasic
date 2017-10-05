@@ -2,17 +2,10 @@ package practice13.common;
 
 public class SuperHero extends Hero  {
 
-	public SuperHero() {
+	private Item equipment;
 
-		super();
 
-	}
 
-	Item equipment;
-
-	public int attack() {
-		return (super.attack() + this.equipment.getAdditionalDamage());
-	}
 
 	public Item getEquipment() {
         return this.equipment;
@@ -23,5 +16,10 @@ public class SuperHero extends Hero  {
         this.equipment = equipment;
 
     }
+
+	public int attack() {
+		return (super.attack() + this.equipment.getAdditionalDamage());
+	}
+
 
 }

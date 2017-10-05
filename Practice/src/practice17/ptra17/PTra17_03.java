@@ -40,16 +40,19 @@ public class PTra17_03 {
 				System.out.println("問題：" + (i + 1));
 				System.out.println(question[i]);
 
-				System.out.println("回答を数字で入力してください");
 
-				String input = "";
-				int num = 0;
+
+
+
+
+				int num = -1;
 
 				while(true) {
+					System.out.println("回答を数字で入力してください");
 					try {
-						input = ThrowExceptionUtil.inputValue();
+						String input = ThrowExceptionUtil.inputValue();
 						num = Integer.parseInt(input);
-						break;
+
 
 					} catch(IOException e) {
 						System.out.println("例外が発生しました");
@@ -59,6 +62,7 @@ public class PTra17_03 {
 						continue;
 
 					}
+					break;
 				}
 
 				if (answer[i] == num) {

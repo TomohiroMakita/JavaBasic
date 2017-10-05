@@ -12,7 +12,7 @@ public class PTra11_03 {
 	 * ★ PTra11_03クラスに、クラスフィールドでint型のnumberを定義してください
 	 */
 
-	int number;
+	static int number;
 
 	/*
 	 * ★ PTra11_03クラスのコンストラクタを引数なしで定義してください
@@ -21,7 +21,7 @@ public class PTra11_03 {
 
 	PTra11_03(){
 
-		this.number += 1;
+		this.number++;
 
 	}
 
@@ -29,16 +29,13 @@ public class PTra11_03 {
 
 		// ★ sumメソッドを呼び出してください
 
-		int x = 0;
-		int y = 0;
-
-		sum( x , y );
+		new PTra11_03().sum(5, 10);
 
 	}
 
-	public static void sum(int x, int y) {
+	public  void sum(int x, int y) {
 		System.out.println("sumメソッドを呼び出しました。" + x + "＋" + y + "＝" + (x + y));
 
-		System.out.println("クラスフィールドnumber：" /* + ★ クラスフィールドnumberの出力をしてください */);
+		System.out.println("クラスフィールドnumber：" + this.number/* + ★ クラスフィールドnumberの出力をしてください */);
 	}
 }

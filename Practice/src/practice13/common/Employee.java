@@ -2,11 +2,11 @@ package practice13.common;
 
 public class Employee extends Person {
 
-	String departmentNm;
-	int departmentCnt;
+	private String departmentNm;
+	private int departmentCnt;
 
 	public String getDepartmentNm() {
-        return this.departmentNm;
+        return departmentNm;
 	}
 
 	public void setDepartmentNm(String departmentNm) {

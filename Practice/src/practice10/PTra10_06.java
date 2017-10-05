@@ -6,7 +6,7 @@ package practice10;
  * Copyright(c) Rhizome Inc. All Rights Reserved.
  */
 
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class PTra10_06 {
 
@@ -22,118 +22,49 @@ public class PTra10_06 {
 		 */
 
 
-		Car car1 = new Car();
-		car1.serialNo = 10000;
-		car1.color = "Red";
-		car1.gasoline = 50;
+		Scanner scanner = new Scanner(System.in);
+		Car[] cars = new Car[3];
+		for (int i = 0; i < cars.length; i++) {
+			System.out.println("------------------------------------");
+			System.out.println((i + 1) + "台目");
+			cars[i] = new Car();
 
-		Car car2 = new Car();
-		car2.serialNo = 20000;
-		car2.color = "Blue";
-		car2.gasoline = 75;
+			System.out.println("シリアル№、車体カラー、ガソリン量をカンマ区切りで入力してください");
+			String line = scanner.nextLine();
 
-		Car car3 = new Car();
-		car3.serialNo = 30000;
-		car3.color = "Green";
-		car3.gasoline = 100;
+			String[] inputInfo = line.split(",");
 
+			cars[i].serialNo = Integer.parseInt(inputInfo[0]);
+			cars[i].color = inputInfo[1];
+			cars[i].gasoline = Integer.parseInt(inputInfo[2]);
+		}
+
+		// それぞれの車を走らせる。
 		final int distance = 200;
+		int[] count = new int[cars.length];
 
+		for (int i = 0; i < cars.length; i++) {
+			int move = 0;
+			while (distance - move > 0) {
+				int ret = cars[i].run();
+				if (ret == -1) {
+					count[i] = -1;
+					break;
+				}
 
-		int kyori1 = 0;
-		int kyori2 = 0;
-		int kyori3 = 0;
-
-		int count1 = 0;
-		int count2 = 0;
-		int count3 = 0;
-
-//		Car 1
-
-		while ( kyori1 <= distance ) {
-
-			int run = car1.run();
-
-			kyori1 += run;
-
-//			System.out.println( kyori1 );
-//			System.out.println( count1 );
-
-			count1++;
-
-			if (run == -1) {
-
-				System.out.println( "目的地に到達できませんでした");
-				break;
+				move += ret;
+				count[i]++;
 			}
-
 		}
 
-		if (kyori1 >= distance) {
-
-			System.out.println( "目的地にまで" + count1 + "時間かかりました。残りのガソリンは、" + car1.gasoline + "リットルです");
-
-		}
-
-//		Car 2
-
-		while ( kyori2 <= distance ) {
-
-			int run = car2.run();
-
-			kyori2 += run;
-
-//			System.out.println( kyori2 );
-//			System.out.println( count2 );
-
-			count2++;
-
-			if (run == -1) {
-
-				System.out.println( "目的地に到達できませんでした");
-				break;
+		// 出力
+		for (int i = 0; i < count.length; i++) {
+			if (count[i] == -1) {
+				System.out.println((i + 1) + "台目は目的地に到達できませんでした");
+			} else {
+				System.out.println((i + 1) + "台目の車が掛かった時間：" + count[i] + "時間");
 			}
-
 		}
-
-		if (kyori2 >= distance) {
-
-			System.out.println( "目的地にまで" + count2 + "時間かかりました。残りのガソリンは、" + car2.gasoline + "リットルです");
-		}
-
-//		Car3
-
-		while ( kyori3 <= distance ) {
-
-			int run = car3.run();
-
-			kyori3 += run;
-
-//			System.out.println( kyori3 );
-//			System.out.println( count3 );
-
-			count3++;
-
-			if (run == -1) {
-
-				System.out.println( "目的地に到達できませんでした");
-				break;
-			}
-
-		}
-
-		if (kyori3 >= distance) {
-
-			System.out.println( "目的地にまで" + count3 + "時間かかりました。残りのガソリンは、" + car3.gasoline + "リットルです");
-
-
-			}
-
-		int[] array = new int[]{count1,count2,count3};
-        Arrays.sort(array);
-        for(int i = 0;i < array.length;i++) {
-        	System.out.println( i + 1 + "位" + "" + array[i] +"時間" );
-        	}
         }
 }
 

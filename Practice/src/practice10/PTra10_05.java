@@ -69,6 +69,10 @@ public class PTra10_05 {
 
 			count++;
 
+			int disp = (distance - kyori) < 0 ? 0 : distance - kyori;
+			System.out.println((count) + "時間で" + run + "km進みました。残り：" + disp + "km");
+			System.out.println();
+
 			if (run == -1) {
 
 				System.out.print( "目的地に到達できませんでした");

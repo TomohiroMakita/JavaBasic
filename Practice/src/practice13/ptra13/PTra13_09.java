@@ -7,6 +7,7 @@
 package practice13.ptra13;
 
 import practice13.common.Employee;
+import practice13.common.Person;
 
 public class PTra13_09 {
 
@@ -37,41 +38,27 @@ public class PTra13_09 {
 
 		// ★ 定数で定義されている各データを使用して、Employeeインスタンスを３つ作成してください
 
-		Employee shain1 = new Employee();
+		Employee[] employees = new Employee[NAMEDATA.length];
 
-		shain1.userNm = NAMEDATA[0];
-		shain1.mail = MAILDATA[0];
-		shain1.password = PASSDATA[0];
-		shain1.setDepartmentNm(QUATERDATA[0][0]);
-
-		int department1 = Integer.parseInt(QUATERDATA[1][1]);
-
-		shain1.setDepartmentCnt(department1);
-
-
-		Employee shain2 = new Employee();
-
-		shain2.userNm = NAMEDATA[1];
-		shain2.mail = MAILDATA[1];
-		shain2.password = PASSDATA[1];
-		shain2.setDepartmentNm(QUATERDATA[0][1]);
-
-		int department2 = Integer.parseInt(QUATERDATA[1][2]);
-
-		shain2.setDepartmentCnt(department2);
+		for (int i = 0; i < employees.length; i++) {
+			employees[i] = new Employee();
+			employees[i].setUserId(Person.BASE_NO + i);
+			employees[i].setUserNm(NAMEDATA[i]);
+			employees[i].setMail(MAILDATA[i]);
+			employees[i].setPassword(PASSDATA[i]);
+			employees[i].setDepartmentNm(QUATERDATA[0][i]);
+			employees[i].setDepartmentCnt(Integer.parseInt(QUATERDATA[1][i]));
+		}
 
 
-		Employee shain3 = new Employee();
-
-		shain3.userNm = NAMEDATA[2];
-		shain3.mail = MAILDATA[2];
-		shain3.password = PASSDATA[2];
-		shain3.setDepartmentNm(QUATERDATA[0][2]);
-
-		int department3 = Integer.parseInt(QUATERDATA[1][2]);
-
-		shain3.setDepartmentCnt(department3);
-
-
+		for (Employee emp : employees) {
+			System.out.println("---------------------------------");
+			System.out.println("ID:" + emp.getUserId());
+			System.out.println("名前：" + emp.getUserNm());
+			System.out.println("メールアドレス：" + emp.getMail());
+			System.out.println("パスワード：" + emp.getPassword());
+			System.out.println("部署：" + emp.getDepartmentNm());
+			System.out.println("部署人数：" + emp.getDepartmentCnt());
+		}
 	}
 }

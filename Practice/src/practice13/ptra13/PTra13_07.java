@@ -33,7 +33,7 @@ public class PTra13_07 {
 
 		// ★ 作成したItemインスタンスをSuperHeroに持たせてください
 
-		
+
 
 		/*
 		 * ★ SuperHeroとSlimeを、どちらかが体力０になるまで戦わせます
@@ -41,6 +41,7 @@ public class PTra13_07 {
 		 * 	●SuperHeroの攻撃 -> ダメージ判定 -> Slimeの攻撃 -> ダメージ判定
 		 * 上記を繰り返し行います
 		 */
+
 
 		while( true ) {
 

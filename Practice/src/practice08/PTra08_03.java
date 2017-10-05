@@ -23,7 +23,7 @@ public class PTra08_03 {
 
 			number = random;
 
-			System.out.println(number);
+			System.out.println("選択された値：" + number);
 
 		// ★ 変数resultを宣言し、メソッドisEvenNumberを（変数number）で呼び出した結果を代入してください
 
